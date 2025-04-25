@@ -1905,8 +1905,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Set uniform container size for all project images */
 .portfolio .project-img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
