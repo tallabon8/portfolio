@@ -1942,3 +1942,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   object-fit: contain;
   padding: 0.5rem;
 }
+
+/* Grid layout for project list */
+.project-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr); /* 2x3 matrix by default */
+}
+
+/* Single column when filtered */
+.project-list:has(.project-item[data-category]:not([data-category="all"]):not(.active)) {
+  grid-template-columns: 1fr; /* 1x3 matrix when filtered */
+}
