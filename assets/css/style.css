@@ -1922,7 +1922,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 @media (min-width: 450px) {
   .portfolio .project-img {
     height: 300px;
-    width: 300px;
   }
 }
 /* Specific image size overrides */
