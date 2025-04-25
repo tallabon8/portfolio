@@ -1911,14 +1911,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Set uniform container size for all project images */
 .portfolio .project-img {
-  width: 100%;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: hsl(240, 2%, 13%);
-  border-radius: 16px;
-  overflow: hidden;
 }
 
 /* Default image styling */
@@ -1957,17 +1955,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 10px;
-  width: 100%;
 }
 
 /* Responsive layout for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 200px) {
   .project-list {
     grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .portfolio .project-img {
-    height: 200px;
   }
 }
 
@@ -1975,25 +1968,10 @@ textarea.form-input::-webkit-resizer { display: none; }
   .project-list {
     grid-template-columns: 1fr;
   }
-  
-  .portfolio .project-img {
-    height: 180px;
-  }
 }
 
-/* Remove the filtered layout since we want consistent 2x3 grid */
+/* portfolio and blog grid */
 .project-list[data-filtered] {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Ensure project items take full width of their grid cell */
-.project-item.active {
-  display: block;
-  width: 100%;
-}
-
-.project-item > a {
-  display: block;
-  width: 100%;
+  grid-template-columns: repeat(1fr, 3);
 }
 
