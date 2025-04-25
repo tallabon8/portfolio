@@ -1899,3 +1899,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 .university-seal img:hover {
   opacity: 1;
 }
+
+/*-----------------------------------*\
+  #PORTFOLIO: uniform project‐image sizing
+\*-----------------------------------*/
+
+/* ensure all .project-img containers share a fixed height */
+.portfolio .project-img {
+  height: 300px;
+}
+
+/* make the img inside fill and crop as needed */
+.portfolio .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* override any responsive “height: auto” rules */
+@media (min-width: 450px) {
+  .portfolio .project-img {
+    height: 300px;
+  }
+}
