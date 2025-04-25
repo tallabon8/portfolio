@@ -1986,3 +1986,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   background-color: hsl(240, 2%, 13%);
   padding: 1rem;
 }
+
+/*── Make MIPS, Train & ArmSense fill the 300px project‐img box ──*/
+.portfolio .project-img img[src*="mips.png"],
+.portfolio .project-img img[src*="train.png"],
+.portfolio .project-img img[src*="armsense_logo.png"] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
