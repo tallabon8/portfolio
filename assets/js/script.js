@@ -77,11 +77,17 @@ for (let i = 0; i < selectItems.length; i++) {
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
+const projectList = document.querySelector(".project-list");
 
 const filterFunc = function (selectedValue) {
+  // Add or remove data-filtered attribute based on selection
+  if (selectedValue === "all") {
+    projectList.removeAttribute("data-filtered");
+  } else {
+    projectList.setAttribute("data-filtered", "");
+  }
 
   for (let i = 0; i < filterItems.length; i++) {
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
     } else if (selectedValue === filterItems[i].dataset.category) {
@@ -89,9 +95,7 @@ const filterFunc = function (selectedValue) {
     } else {
       filterItems[i].classList.remove("active");
     }
-
   }
-
 }
 
 // add event in all filter button items for large screen

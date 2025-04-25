@@ -1624,7 +1624,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* portfolio and blog grid */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .project-list:not([data-filtered]) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-list[data-filtered] {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
 
 
@@ -1943,14 +1949,27 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 0.5rem;
 }
 
-/* Grid layout for project list */
+/* Default layout for project list (1x3 matrix for filtered views) */
 .project-list {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 30px;
-  grid-template-columns: repeat(2, 1fr); /* 2x3 matrix by default */
+  margin-bottom: 10px;
 }
 
-/* Single column when filtered */
-.project-list:has(.project-item[data-category]:not([data-category="all"]):not(.active)) {
-  grid-template-columns: 1fr; /* 1x3 matrix when filtered */
+/* When "All" is selected (no specific filter active) */
+.project-list:not([data-filtered]) {
+  grid-template-columns: repeat(2, 1fr);
 }
+
+@media (max-width: 768px) {
+  .project-list:not([data-filtered]) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* portfolio and blog grid */
+.project-list[data-filtered] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
