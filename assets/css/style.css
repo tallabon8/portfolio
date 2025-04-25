@@ -1936,3 +1936,19 @@ textarea.form-input::-webkit-resizer { display: none; }
   background-color: hsl(240, 2%, 13%); /* Matches the theme's background color */
   padding: 1rem;
 }
+/* Preserve image aspect ratio while fitting within container */
+.portfolio .project-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(240, 2%, 13%);
+}
+
+.portfolio .project-img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 1rem;
+}
