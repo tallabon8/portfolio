@@ -1907,6 +1907,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* ensure all .project-img containers share a fixed height */
 .portfolio .project-img {
   height: 300px;
+  width: 300px;
 }
 
 /* make the img inside fill and crop as needed */
@@ -1957,4 +1958,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: 100%;
   max-width: 500px; /* Limit maximum width */
   margin: 0 auto; /* Center horizontally if smaller than container */
+}
+/* Shrink images to fit within container while maintaining aspect ratio */
+.portfolio .project-img img {
+  max-width: 90%; /* Leave some padding space */
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 2rem; /* Increase padding to create more space around image */
+}
+
+/* Ensure container maintains consistent height */
+.portfolio .project-img {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
