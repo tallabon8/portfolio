@@ -1923,3 +1923,16 @@ textarea.form-input::-webkit-resizer { display: none; }
     height: 300px;
   }
 }
+/* Specific image size overrides */
+.portfolio .project-img img[src*="mips.png"],
+.portfolio .project-img img[src*="digitrec.png"], 
+.portfolio .project-img img[src*="storytime.png"],
+.portfolio .project-img img[src*="tearsheet.png"],
+.portfolio .project-img img[src*="train.png"],
+.portfolio .project-img img[src*="armsense_logo.png"] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* This will ensure the entire image is visible without cropping */
+  background-color: hsl(240, 2%, 13%); /* Matches the theme's background color */
+  padding: 1rem;
+}
