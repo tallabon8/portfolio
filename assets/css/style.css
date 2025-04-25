@@ -1959,17 +1959,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* When "All" is selected (no specific filter active) */
 .project-list:not([data-filtered]) {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1fr, 2);
 }
 
 @media (max-width: 768px) {
   .project-list:not([data-filtered]) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 3fr;
   }
 }
 
 /* portfolio and blog grid */
 .project-list[data-filtered] {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1fr, 3);
 }
 
