@@ -1952,3 +1952,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   object-fit: contain;
   padding: 1rem;
 }
+/* Set a consistent width for project images */
+.portfolio .project-img {
+  width: 100%;
+  max-width: 500px; /* Limit maximum width */
+  margin: 0 auto; /* Center horizontally if smaller than container */
+}
