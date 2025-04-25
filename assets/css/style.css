@@ -934,7 +934,7 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 10px;
 }
@@ -1949,22 +1949,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 0.5rem;
 }
 
-/* Default layout for project list (1x3 matrix for filtered views) */
+/* Default layout for project list */
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 10px;
 }
 
-/* When "All" is selected (no specific filter active) */
-.project-list:not([data-filtered]) {
-  grid-template-columns: repeat(2fr, 3);
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 768px) {
-  .project-list:not([data-filtered]) {
-    grid-template-columns: 3fr;
+@media (max-width: 480px) {
+  .project-list {
+    grid-template-columns: 1fr;
   }
 }
 
