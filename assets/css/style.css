@@ -1959,7 +1959,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* When "All" is selected (no specific filter active) */
 .project-list:not([data-filtered]) {
-  grid-template-columns: repeat(1fr, 2);
+  grid-template-columns: repeat(2fr, 3);
 }
 
 @media (max-width: 768px) {
