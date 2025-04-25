@@ -1976,3 +1976,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   align-items: center;
   justify-content: center;
 }
+/* Ensure consistent styling for all project images */
+.portfolio .project-img img[src*="mips.png"],
+.portfolio .project-img img[src*="train.png"],
+.portfolio .project-img img[src*="armsense_logo.png"] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: hsl(240, 2%, 13%);
+  padding: 1rem;
+}
