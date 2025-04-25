@@ -1958,7 +1958,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* Responsive layout for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 200px) {
   .project-list {
     grid-template-columns: repeat(2, 1fr);
   }
