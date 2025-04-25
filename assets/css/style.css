@@ -934,7 +934,7 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 30px;
   margin-bottom: 10px;
 }
@@ -1624,13 +1624,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* portfolio and blog grid */
 
-  .project-list:not([data-filtered]) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-list[data-filtered] {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
 
 
@@ -1911,8 +1905,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Set uniform container size for all project images */
 .portfolio .project-img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1948,30 +1942,3 @@ textarea.form-input::-webkit-resizer { display: none; }
   object-fit: contain;
   padding: 0.5rem;
 }
-
-/* Default layout for project list */
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 10px;
-}
-
-/* Responsive layout for smaller screens */
-@media (max-width: 200px) {
-  .project-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* portfolio and blog grid */
-.project-list[data-filtered] {
-  grid-template-columns: repeat(1fr, 3);
-}
-
