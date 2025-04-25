@@ -1924,14 +1924,21 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* Specific styling for project images */
-.portfolio .project-img img[src*="mips.png"],
 .portfolio .project-img img[src*="digitrec.png"],
 .portfolio .project-img img[src*="storytime.png"],
-.portfolio .project-img img[src*="tearsheet.png"],
-.portfolio .project-img img[src*="train.png"],
-.portfolio .project-img img[src*="armsense_logo.png"] {
+.portfolio .project-img img[src*="tearsheet.png"] {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
   padding: 1rem;
+}
+
+/* Smaller container for certain images */
+.portfolio .project-img img[src*="mips.png"],
+.portfolio .project-img img[src*="train.png"],
+.portfolio .project-img img[src*="armsense_logo.png"] {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  padding: 0.5rem;
 }
