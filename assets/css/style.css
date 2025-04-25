@@ -1969,12 +1969,3 @@ textarea.form-input::-webkit-resizer { display: none; }
   object-fit: contain;
   padding: 2rem; /* Increase padding to create more space around image */
 }
-
-/* Ensure container maintains consistent height */
-.portfolio .project-img {
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
