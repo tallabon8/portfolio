@@ -934,12 +934,15 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.project-item { display: none; }
+.project-item {
+  width: 100%;
+  display: none;
+}
 
 .project-item.active {
   display: block;
@@ -1904,7 +1907,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 \*-----------------------------------*/
 
 /* Portfolio grid layout */
-.project-item {
+.project-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -1951,4 +1954,30 @@ textarea.form-input::-webkit-resizer { display: none; }
   max-height: 70%;
   object-fit: contain;
   padding: 0.5rem;
+}
+
+/* Update the project list grid layout */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Ensure project items take full width of their grid cell */
+.project-item {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
 }
